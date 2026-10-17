@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Space Grotesk Variable", "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --ease-precise: cubic-bezier(0.22, 1, 0.36, 1);
+  --animate-marquee: marquee 38s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+html { scroll-behavior: auto; -webkit-tap-highlight-color: transparent; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+body { background: #fff; color: #0f172a; }
+
+::selection { background: #2563eb; color: #fff; }
+
+/* Fine engineering-paper grid behind blueprints */
+.blueprint-grid {
+  background-image:
+    linear-gradient(to right, rgb(15 23 42 / 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(15 23 42 / 0.045) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+.blueprint-grid-dark {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Desaturated photos that bloom to colour on hover */
+.spotlight-img { filter: grayscale(0.85) contrast(1.05); transition: filter 0.7s var(--ease-precise), transform 0.9s var(--ease-precise); }
+.group:hover .spotlight-img, .spotlight-img:hover { filter: grayscale(0) contrast(1); transform: scale(1.02); }
+
+.marquee-mask { mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent); }
+
+/* Focus ring that matches the brand */
+:focus-visible { outline: 2px solid #2563eb; outline-offset: 3px; border-radius: 6px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+@media print {
+  header, footer, .no-print { display: none !important; }
+}
