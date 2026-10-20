@@ -1,7 +1,7 @@
 import { nav, site } from "@/config/site";
 import { FIGURES } from "@/content/catalogue";
 import { SERVICES } from "@/content/site-content";
-import { Wordmark } from "./Logo";
+import { LogoFull } from "./Logo";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10">
         <div className="grid md:grid-cols-12 gap-12">
           <div className="md:col-span-4">
-            <Wordmark light />
+            <LogoFull width={220} />
             <p className="mt-5 text-sm leading-relaxed max-w-xs">{site.description}</p>
             <p className="mt-5 font-mono text-[10px] tracking-[0.2em] uppercase text-slate-500">{site.hours}</p>
           </div>

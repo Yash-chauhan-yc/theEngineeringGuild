@@ -11,6 +11,7 @@ import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import ClientShell from "@/components/ClientShell";
+import Products from "@/components/Products";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <Hero />
         <Marquee />
         <Services />
+        <Products />
         <Catalogue />
         <Gallery />
         <Process />

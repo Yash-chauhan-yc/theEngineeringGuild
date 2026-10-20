@@ -8,10 +8,10 @@ export const site = {
   tagline: "Printing, Packaging & Converting Solutions",
   description:
     "The Engineering Guild — your turnkey partner in printing, packaging & converting solutions. Machinery retrofits, automation lab repairs, precision manufacturing and industrial spares.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "enquiries@theengineeringguild.com",
-  phone: process.env.NEXT_PUBLIC_CONTACT_PHONE ?? "+91 90000 00000",
-  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "919000000000",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://theengineeringguild.online",
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "theengineeringguild2026@gmail.com",
+  phone: process.env.NEXT_PUBLIC_CONTACT_PHONE ?? "+91 87449 71470",
+  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "918744971470",
   address: "Industrial Estate — address on request",
   hours: "Mon–Sat · 09:00–19:00 IST · 24/7 emergency automation line",
   responseTime: "within one working day",
@@ -19,6 +19,7 @@ export const site = {
 
 export const nav = [
   { href: "#services", label: "Services" },
+  { href: "#products", label: "Products" },
   { href: "#catalogue", label: "Catalogue" },
   { href: "#gallery", label: "Retrofits" },
   { href: "#about", label: "About" },

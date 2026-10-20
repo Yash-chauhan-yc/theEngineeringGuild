@@ -17,10 +17,18 @@ export const metadata: Metadata = {
   applicationName: site.name,
   authors: [{ name: site.name }],
   alternates: { canonical: "/" },
-  openGraph: { type: "website", url: "/", siteName: site.name, title: `${site.name} — ${site.tagline}`, description: site.description, locale: "en_IN" },
-  twitter: { card: "summary_large_image", title: site.name, description: site.description },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: site.name,
+    title: `${site.name} — ${site.tagline}`,
+    description: site.description,
+    locale: "en_IN",
+    images: [{ url: "/brand/og-image.jpg", width: 1200, height: 630, alt: site.name }],
+  },
+  twitter: { card: "summary_large_image", title: site.name, description: site.description, images: ["/brand/og-image.jpg"] },
   robots: { index: true, follow: true },
-  icons: { icon: "/icon.svg" },
+  icons: { icon: "/brand/logo-mark.png", apple: "/brand/apple-touch-icon.png" },
 };
 
 export const viewport: Viewport = { themeColor: "#ffffff", width: "device-width", initialScale: 1 };
@@ -34,6 +42,8 @@ const jsonLd = {
       name: site.name,
       description: site.description,
       url: site.url,
+      logo: `${site.url}/brand/logo-mark.png`,
+      image: `${site.url}/brand/og-image.jpg`,
       email: site.email,
       telephone: site.phone,
       areaServed: "IN",
